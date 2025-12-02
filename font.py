@@ -3,6 +3,7 @@ sys.path.append(os.pardir)
 import numpy as np
 from dataset.mnist import load_mnist
 from PIL import Image
+import starting_value
 
 def img_show(img):
   pil_img=Image.fromarray(np.uint8(img))
@@ -25,4 +26,15 @@ class Font:
     
     def __init__(self,):
         (x_train,t_train),(x_test,t_test)=load_mnist(flatten=True,normalize=False)
-        
+        self.parmas={}
+        self.parmas['W1']=starting_value.xavier(28)
+        self.parmas['W2']=starting_value.xavier(28)
+
+    
+    def predict(self,x):
+        w1,w2=self.parmas['W1'],self.parmas['W2']
+        b1,b2=self.parmas['b1'],self.parmas['b2']
+
+        a1=np.dot(x,w1)+b1
+
+        a2=
