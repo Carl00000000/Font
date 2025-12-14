@@ -19,11 +19,19 @@ print(img[10])
 #img_show(img)
 #图片展示
 
-file_path='mnist.pkl'
-if os.path.exists(file_path):
+def get_weight:
+  file_path='mnist.pkl'
+  if os.path.exists(file_path):
+    with open('mnist.pkl','rb') as file:
+      loaded_data=pickle.load(file)
+  else:
+    starting_value.set_value()
+    with open('mnist.pkl','rb') as file:
+      loaded_data=pickle.load(file)
+  return loaded_data
+    
 
-else:
-  starting_value.set_value()
+
 
 
 # MINIST数据集28X28 1

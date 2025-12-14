@@ -23,3 +23,5 @@ def set_value():
 
     with open('mnist.pkl','wb') as file
       pickle.dump(data,file)
+
+
