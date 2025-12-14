@@ -19,7 +19,7 @@ print(img[10])
 #img_show(img)
 #图片展示
 
-def get_weight:
+def get_weight():
   file_path='mnist.pkl'
   if os.path.exists(file_path):
     with open('mnist.pkl','rb') as file:
@@ -42,8 +42,29 @@ class Font:
     def __init__(self,):
         (x_train,t_train),(x_test,t_test)=load_mnist(flatten=True,normalize=False)
         self.parmas={}
-        self.parmas['W1']=starting_value.xavier(28)
-        self.parmas['W2']=starting_value.xavier(28)
+        weight=get_weight()
+        i=0
+        value=[]
+        while i<784:
+          value.extend(weight[i])
+          i+=1
+        self.parmas['W1']=value
+        value=[]
+        while i<28:
+          value.extend(weight[i+784])
+          i+=1
+        self.parmas['W2']=value
+        value=[]
+        while i<14:
+          value.extend(weight[i+812])
+          i+=1
+        self.parmas['W3']=value
+        value=[]
+        while i<10:
+          value.extend(weight[i+826])
+          i+=1
+        self.parmas['W4']=value
+
 
     
     def predict(self,x):
