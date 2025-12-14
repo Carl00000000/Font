@@ -4,6 +4,7 @@ import numpy as np
 from dataset.mnist import load_mnist
 from PIL import Image
 import starting_value
+import pickle
 
 def img_show(img):
   pil_img=Image.fromarray(np.uint8(img))
@@ -17,6 +18,12 @@ print(img[10])
 #img=img.reshape(28,28)
 #img_show(img)
 #图片展示
+
+file_path='mnist.pkl'
+if os.path.exists(file_path):
+
+else:
+  starting_value.set_value()
 
 
 # MINIST数据集28X28 1
