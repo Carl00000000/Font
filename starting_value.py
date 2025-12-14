@@ -10,9 +10,9 @@ def he(node_num):
 
 def set_value():
     value1=xavier(784,784,784)
-    value2=xavier(28,28,28)
-    value3=xavier(14,14,14)
-    value4=xavier(10,10,10)
+    value2=xavier(28,28,784)
+    value3=xavier(14,14,28)
+    value4=xavier(10,10,14)
 
     data=[]
     data.extend(value1)
