@@ -14,11 +14,7 @@ def set_value():
     value3=xavier(14,14,28)
     value4=xavier(10,10,14)
 
-    data=[]
-    data.extend(value1)
-    data.extend(value2)
-    data.extend(value3)
-    data.extend(value4)
+    data=np.array([value1],[value2],[value3],[value4])
 
 
     with open('mnist.pkl','wb') as file
