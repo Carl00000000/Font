@@ -43,6 +43,7 @@ class Font:
         (x_train,t_train),(x_test,t_test)=load_mnist(flatten=True,normalize=False)
         self.parmas={}
         weight=get_weight()
+        '''
         i=0
         value=[]
         while i<784:
@@ -64,6 +65,14 @@ class Font:
           value.extend(weight[i+826])
           i+=1
         self.parmas['W4']=value
+        '''
+        self.parmas['w1']=weight['w1']
+        self.parmas['w2']=weight['w2']
+        self.parmas['w3']=weight['w3']
+        self.parmas['w4']=weight['w4']
+
+
+
 
 
     
