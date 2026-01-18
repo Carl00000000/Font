@@ -72,13 +72,19 @@ class Font:
         self.parmas['w4']=weight['w4']
 
 
+        get_input=
+
+        for i in get_input:
+          predict(i)
+
+
+
 
 
 
     
     def predict(self,x):
-        w1,w2=self.parmas['W1'],self.parmas['W2']
-        b1,b2=self.parmas['b1'],self.parmas['b2']
+        w1,w2,w3,w4=self.parmas['w1'],self.parmas['w2'],self.parmas['w3'],self.parmas['w4']
 
         a1=np.dot(x,w1)+b1
 
