@@ -14,13 +14,8 @@ def set_value():
     value3=xavier(14,14,28)
     value4=xavier(10,10,14)
 
-    data=[]
-    data.extend(value1)
-    data.extend(value2)
-    data.extend(value3)
-    data.extend(value4)
-
-
+    data={'w1':value1,'w2':value2,'w3':value3,'w4':value4}
+    
     with open('mnist.pkl','wb') as file
       pickle.dump(data,file)
 
