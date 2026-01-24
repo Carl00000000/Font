@@ -103,5 +103,9 @@ class Font:
         return c1
 
     self batch_take(a,b,c):
-        
+        for index,i2 in enumerate(a):
+          c1=take(i2,b[index])
+          c.append(c1)
+
+
     
