@@ -87,9 +87,9 @@ class Font:
     
     def predict(self,x):
         w1,w2,w3,w4=self.parmas['w1'],self.parmas['w2'],self.parmas['w3'],self.parmas['w4']
-
-        a1=batch_X2(x,w1,Take)
-        a1_add=batch_add_X1(a1)
+        batch_take(w1,x,self.variable['v1'])
+        batch_take(w2,self.variable['v1'],self.variable['v2'])
+        batch_take(w3,self.variable['v2'],self.variable['v3'])
 
 
     def set_variable():
