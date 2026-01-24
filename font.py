@@ -43,6 +43,7 @@ class Font:
         (x_train,t_train),(x_test,t_test)=load_mnist(flatten=True,normalize=False)
         self.parmas={}
         weight=get_weight()
+        set_variable()
         '''
         i=0
         value=[]
@@ -70,6 +71,7 @@ class Font:
         self.parmas['w2']=weight['w2']
         self.parmas['w3']=weight['w3']
         self.parmas['w4']=weight['w4']
+        
 
 
         get_input=
@@ -88,3 +90,18 @@ class Font:
 
         a1=batch_X2(x,w1,Take)
         a1_add=batch_add_X1(a1)
+
+
+    def set_variable():
+        self.variable['v1']=[]
+        self.variable['v2']=[]
+        self.variable['v3']=[]
+
+    def take(weight1,variable1):
+        c=weight1.data*variable1.data
+        c1=Variable(c,weight1)
+        return c1
+
+    self batch_take(a,b,c):
+        
+    
