@@ -78,6 +78,7 @@ class Font:
 
         for i in get_input:
           predict(i)
+          reverse(i,self.parmas['w4'],)
 
 
 
@@ -102,10 +103,19 @@ class Font:
         c1=Variable(c,weight1)
         return c1
 
-    self batch_take(a,b,c):
+    def batch_take(a,b,c):
         for index,i2 in enumerate(a):
           c1=take(i2,b[index])
           c.append(c1)
+
+    def reverse(a,res,study):
+      correct=a.
+      res[correct].grad=1
+      res[correct].data=re[correct].data+res[correct].grad*study
+      
+
+
+
 
 
     
