@@ -17,3 +17,5 @@ class Variables
         self.grad=None
         self.creators=[]
         self.creators.append(val)
+        for a in val:
+             self.data=self.data+a

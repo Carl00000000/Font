@@ -105,10 +105,19 @@ class Font:
         return c1
 
     def batch_take(a,b,c):
-        for index,i2 in enumerate(a):
+        #for index,i2 in enumerate(a):
           #c1=take(i2,b[index])
           #c.append(c1)
-          
+        vals=[]
+        for val in a:
+          vals2=[]
+          for index,i2 in enumerate(val):
+            c1=take(i2,b[index])
+            vals2.append(c1)
+          variable2=Variables(vals2)
+          vals.append(variable2)
+        return vals
+
 
     def reverse(a):
      
