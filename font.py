@@ -101,13 +101,14 @@ class Font:
 
     def take(weight1,variable1):
         c=weight1.data*variable1.data
-        c1=Variable(c,weight1)
+        c1=Variable(c,weight1,variable1)
         return c1
 
     def batch_take(a,b,c):
         for index,i2 in enumerate(a):
-          c1=take(i2,b[index])
-          c.append(c1)
+          #c1=take(i2,b[index])
+          #c.append(c1)
+          
 
     def reverse(a):
      
