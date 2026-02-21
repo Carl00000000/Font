@@ -73,6 +73,7 @@ class Font:
         self.parmas['w4']=weight['w4']
         self.parmas['reverses']=[]
         self.parmas['backward']=[]
+        self.learning=
         
 
 
@@ -128,7 +129,14 @@ class Font:
 
     def backward2():
       for val in self.parmas['backward']:
-        
+        if val.grad==None:
+          val.get_grad()
+        if val.creators!=None:
+          self.parmas['backward'].append(val.creators)
+
+        val.data=val.data+val.grad*self.learning
+
+        self.parmas['backward'].remove(val)
 
       
 
