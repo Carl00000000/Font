@@ -72,6 +72,7 @@ class Font:
         self.parmas['w3']=weight['w3']
         self.parmas['w4']=weight['w4']
         self.parmas['reverses']=[]
+        self.parmas['backward']=[]
         
 
 
@@ -79,7 +80,7 @@ class Font:
 
         for i in get_input:
           predict(i)
-          reverse()
+          backward(i)
 
 
 
@@ -119,7 +120,18 @@ class Font:
         return vals
 
 
-    def reverse(a):
+    def backward(a):
+      r1=
+      self.parmas['w4'][r1].grad=1
+      self.parmas['backward'].append(self.parmas['w4'][r1])
+      backward2():
+
+    def backward2():
+      for val in self.parmas['backward']:
+        
+
+      
+
      
 
 
