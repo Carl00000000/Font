@@ -29,6 +29,11 @@ class Variable_multiply(Variable):
         self.creators_weight=w
         self.creators_variable=d
 
+    def set_grad():
+        self.creators_weight.grad=self.creators_variable*self.grad
+        self.creators_variable.grad=self.creators_weight*self.grad
+
+
 
 
 class Variable_batch_add(Variable):
@@ -39,3 +44,9 @@ class Variable_batch_add(Variable):
 
         self.grad=None
         self.creators=d
+
+    def set_grad():
+        for val in self.creators:
+            val.grad=self.grad
+
+    
